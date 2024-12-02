@@ -4,7 +4,7 @@
 
 This is a modified version that all the cost multipliers are removed.
 
-https://maigo611.github.io/EvolveNoMult/
+https://maigo611.github.io/EvolveEZ/
 
 ## About
 
