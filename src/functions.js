@@ -789,7 +789,7 @@ export function costMultiplier(structure,offset,base,mutiplier,cat){
     }
 	var result = Math.round((mutiplier ** count) * base);
     if (mutiplier ** count > 1) {
-        result = base;
+        result = base*1.03;
     }
     return result;
 }
@@ -826,7 +826,7 @@ export function spaceCostMultiplier(action,offset,base,mutiplier,sector,c_min){
     }    
     var result = Math.round((mutiplier ** count) * base);
     if (mutiplier ** count > 1) {
-        result = base;
+        result = base*1.03;
     }
     return result;
 }
