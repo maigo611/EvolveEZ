@@ -4947,7 +4947,7 @@ export function casinoEffect(){
 function evolveCosts(molecule,base,mult,offset){
     let count = (global.evolution.hasOwnProperty(molecule) ? global.evolution[molecule].count : 0) + (offset || 0);
     //return count * mult + base;
-    return base*1.03;
+    return base;
 }
 
 function setChallenge(challenge){

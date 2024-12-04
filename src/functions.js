@@ -787,9 +787,10 @@ export function costMultiplier(structure,offset,base,mutiplier,cat){
     if (offset){
         count += offset;
     }
+    // return Math.round((mutiplier ** count) * base);
 	var result = Math.round((mutiplier ** count) * base);
     if (mutiplier ** count > 1) {
-        result = base*1.03;
+        result = base;
     }
     return result;
 }
@@ -823,12 +824,13 @@ export function spaceCostMultiplier(action,offset,base,mutiplier,sector,c_min){
     var count = action === 'citizen' ? global['resource'][global.race.species].amount : (global[sector][action] ? global[sector][action].count : 0);
     if (offset && typeof offset === 'number'){
         count += offset;
-    }    
-    var result = Math.round((mutiplier ** count) * base);
-    if (mutiplier ** count > 1) {
-        result = base*1.03;
     }
-    return result;
+    return Math.round((1.005 ** count) * base);
+    // var result = Math.round((mutiplier ** count) * base);
+    // if (mutiplier ** count > 1) {
+    //     result = base*1.03;
+    // }
+    // return result;
 }
 
 export function harmonyEffect(){

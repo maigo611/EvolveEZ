@@ -1637,11 +1637,7 @@ function costMultiplier(project,offset,base,multiplier,wiki){
     if (offset){
         rank += offset;
     }
-    var result = Math.round((multiplier ** rank) * base);
-    if (multiplier ** rank > 1) {
-        result = base;
-    }
-    return result;
+    return Math.round((1.03 ** rank) * base);
 }
 
 function physics(){
